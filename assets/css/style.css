@@ -1,0 +1,511 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input:focus {
+    outline: none; /* 포커스를 받았을 때 기본 테두리를 제거합니다. */
+}
+
+button {
+    text-decoration: none;
+    border: none;
+}
+a { text-decoration: none;}
+
+/* 로그인폼 */
+
+.LoginFormContents {
+    width: 100%;
+    height: 100vh;
+    background: #f5f6f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoginWrap {
+    text-align: center;
+    /* background-color: #fff; */
+    /* padding: 100px; */
+}
+
+.LoginTitle>h1 {
+    font-size: 2rem;
+    color: #5b73e8;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.LoginTitle p {
+    color: #5d5d5d;
+    font-size: 1.1rem;
+}
+.LoginTitle {
+    padding-bottom: 40px;
+}
+
+.form-group input {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    width: 400px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding-left: 10px; 
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #999; /* 원하는 색상으로 변경 */
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border: 1px solid #5b73e8;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.LoginForm button {
+    width: 400px;
+    height: 43px;
+    border-radius: 8px;
+    background-color: #5b73e8;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.SignIn p {
+    font-size: 0.8rem;
+    color: #5d5d5d;
+    margin-top: 40px;
+}
+.SignIn a {
+    color: #007bff; /* 링크 텍스트 색상을 원하는 색상으로 변경합니다. */
+    text-decoration: none; /* 링크에 밑줄을 없앱니다. */
+    transition: color 0.3s; /* 링크 색상 변화에 애니메이션 효과를 추가합니다. */
+}
+
+
+
+/* 회사 등록 페이지 */
+
+
+.RegisterContents {
+    width: 100%;
+    height: 100vh;
+    background: #f5f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.RegisterWrap {
+    background-color: #fff;
+    padding: 50px;
+}
+.RegisterTitle {
+    margin-bottom: 30px;
+}
+
+.RegisterTitle h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.RegisterTitle p {
+    color: #5d5d5d;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.register-form-group label, .form-group-file label{
+    font-size: 1.1rem;
+    margin: 15px 0px 10px 0px;
+    display: block;
+    text-align: left;
+}
+
+.register-form-group label::after, .form-group-file label::after{
+    content: "*";
+    color: #5b73e8;
+}
+
+.register-form-group input {
+    width: 350px;
+    height: 40px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+}
+
+.file-label {
+    display: block;
+  }
+
+.file-content {
+    display: flex;
+}
+
+  #file-name-display {
+    width: 250px;
+    background: #fff;
+    height: 40px;
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #5d5d5d;
+  }
+
+  #file-name-display:hover {
+    white-space: normal; /* 마우스를 올릴 때 모든 텍스트를 표시합니다. */
+    z-index: 1; /* 다른 요소 위로 표시합니다. */
+    position: relative; /* 위치 지정을 위해 필요합니다. */
+  }
+
+  .register-submit {
+    width: 450px;
+    height: 40px;
+    background: #5b73e8;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  input[type="text"] {
+    padding-left: 5px;
+  }
+
+  .file-attach {
+    width: 80px;
+    height: 40px;
+    background: #db8272;
+    margin-left: 18px;
+    border-radius: 3px;
+  }
+
+  .file-attach span {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 500;
+
+  }
+
+  .display {
+    text-align: left;
+    line-height: 40px;
+    padding-left: 5px;
+  }
+
+
+/* 헤더와 네비게이션 */
+
+.headerContents {
+    display: flex;
+    justify-content: center;
+ 
+    background-color: #5b73e8;
+    
+}
+
+
+nav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.headerWrap {
+    width: 1600px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.headerWrap h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.navWrap {
+    display: flex;
+    width: 1600px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.navWrap ul {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.navWrap ul li a {
+    text-decoration: none;
+    color: #5d5d5d;
+}
+
+  .content-wrap {
+    display: flex;
+  }
+  
+  .content {
+    width: 1000px;
+  }
+
+  .sideNavWrap h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #5d5d5d;
+    margin-bottom: 20px;
+  }
+
+  .sideNavWrap {
+    margin: 100px;
+  }
+  
+  .sideNavWrap ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 200px;
+    height: 350px;
+    border: 1px solid #eaeaea;
+    padding: 30px 20px;
+  }
+
+  .sideNavWrap ul li a {
+    color: #5d5d5d;
+  }
+
+/* 게시글 관리 -컴포넌트 */
+
+.postWrap {
+    width: 70%;
+}
+
+.postTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.postTitle div:first-child {
+    display: flex;
+}
+
+.postTitle h2 {
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #5d5d5d;
+}
+
+.postTitle span {
+    color: #adadad;
+    line-height: 1.5rem;
+    margin-left: 5px;
+}
+
+.postTitle div:last-child button{
+    background-color: #5b73e8;
+    padding: 10px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.option-tap {
+    display: flex;
+    align-items: center;
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    padding-left: 30px;
+    color: #5d5d5d;
+    margin-bottom: 15px;
+}
+
+.option-check {
+
+    width: 20px;
+    height: 20px;
+    
+    border: 1px solid #bbbbbb;
+    border-radius: 3px;
+
+    &:checked {
+        background-color: #5b73e8; /* 선택된 경우의 배경색 */
+        border-color: #5b73e8; /* 선택된 경우의 테두리 색상 */
+      }
+
+    margin-right: 20px;
+}
+
+
+.postItem {
+    border: 1px solid #eaeaea;
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.postItem:nth-of-type(1) {
+    border-top: 1px solid #eaeaea;
+}
+
+.post-left {
+    display: flex;
+}
+
+.post-left h3 {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+    color: #5d5d5d;
+    font-weight: 500;
+}
+
+.post-left div span:nth-of-type(1) {
+    color: #5b73e8;
+    margin-right: 8px;
+} 
+
+.post-left div span:nth-of-type(2) {
+    color: #5d5d5d;
+    font-size: 0.8rem;
+    margin-right: 8px;
+}
+
+.post-left div span:nth-of-type(3) {
+    color: #999;
+    font-size: 0.8rem;
+    margin-right: 8px;
+}
+
+.post-left div span:nth-of-type(4) {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.post-right {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.post-right button {
+    cursor: pointer;
+    border: 1px solid #eaeaea;
+    width: 50px;
+    height: 40px;
+    font-size: 0.9rem;
+    background: transparent;
+}
+
+
+
+/* 카테고리 부분 */
+
+
+.ct-title h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.ct-wrap {
+    display: flex;
+
+}
+
+.ct-wrap>div:nth-of-type(1) {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    overflow-y: auto;
+    /* 요소의 최대 높이 설정 */
+    max-height: 500px; /* 예시로 지정된 높이 */
+}
+
+.ct-wrap>div:nth-of-type(2) {
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+}
+
+.ct-wrap ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ct-wrap ul li {
+    color: #5d5d5d;
+}
+
+.ct-wrap div:nth-of-type(1) button {
+    border: 1px solid #eaeaea;
+    background: transparent;
+    width: 250px;
+    padding: 10px;
+    color: #5d5d5d;
+    margin-top: 25px;
+}
+
+
+/* 카테고리 세팅 */
+
